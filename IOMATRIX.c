@@ -21,12 +21,12 @@ Matriz matrixLoad(const char* filename){
         }
     }
 
-    fclose();
+    fclose(f);
     //LOG: carga matriz OK
     return m;
 }
 
-void matrixSave(Matriz m, const char* filename){
+void matrixSave(const Matriz m, const char* filename){
     FILE* f;
     f = fopen(filename, "w");
     if(f == NULL){
@@ -42,7 +42,7 @@ void matrixSave(Matriz m, const char* filename){
         fprintf(f, "\n");
     }
 
-    fclose();
+    fclose(f);
     //LOG: guardar matriz OK
 }
 
@@ -56,4 +56,5 @@ void matrixPrint(const Matriz m){
     }
     //LOG: imprimir matriz OK
 }
+
 
