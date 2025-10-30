@@ -63,7 +63,14 @@ int main(){
             printf("Introduce el escalar k: ");
             scanf("%d", &k);
         }
-    
+
+        int i = 0; int j = 0;
+        for(i; i<5; i++){
+            for(j; j<5; j++){
+                printf("%d ", R.mat[i][j]);
+            }
+            printf("\n");
+        }
 
         switch (opcion){
             case 1:
@@ -86,4 +93,5 @@ int main(){
     } while (opcion != 5);
     
     return 0;
+
 }
