@@ -3,9 +3,10 @@
 
 //Carga y guardado de matrices:
 void matrixLoad(const char* filename);
-void matrixSave(const char* filename);
+void matrixSave(const Matriz m, const char* filename);
+void matrixPrint(const Matriz m);
 
-//Log:
-void writeLog(const char* filename);
+//Errores:
+void errorHandler();
 
 #endif // _IOMATRIX_H
