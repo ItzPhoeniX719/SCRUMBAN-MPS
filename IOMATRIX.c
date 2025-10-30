@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include "IOMATRIX.h"
+#include "OPMATRIX.h"
 
 Matriz matrixLoad(const char* filename){
     FILE* f;
     f = fopen(filename, "r");
     if(f == NULL){
-        //error;
+        log("Error al abrir el fichero", 1);
         exit;
     }
 
@@ -20,7 +21,7 @@ Matriz matrixLoad(const char* filename){
         }
     }
 
-    fclose();
+    fclose(f);
     //LOG: carga matriz OK
     return m;
 }
@@ -41,7 +42,7 @@ void matrixSave(Matriz m, const char* filename){
         fprintf(f, "\n");
     }
 
-    fclose();
+    fclose(f);
     //LOG: guardar matriz OK
 }
 
@@ -55,3 +56,4 @@ void matrixPrint(const Matriz m){
     }
     //LOG: imprimir matriz OK
 }
+
