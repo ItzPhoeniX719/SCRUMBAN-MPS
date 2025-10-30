@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "IOMATRIX.h"
 
 Matriz matrixLoad(const char* filename){
@@ -55,3 +56,4 @@ void matrixPrint(const Matriz m){
     }
     //LOG: imprimir matriz OK
 }
+
